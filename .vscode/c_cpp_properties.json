@@ -1,0 +1,23 @@
+{
+    "configurations": [
+        {
+            "name": "Pico",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "${userHome}/.pico-sdk/sdk/2.2.0/**",
+                "${workspaceFolder}/bme280"
+            ],
+            "forcedInclude": [
+                "${workspaceFolder}/build/generated/pico_base/pico/config_autogen.h",
+                "${userHome}/.pico-sdk/sdk/2.2.0/src/common/pico_base_headers/include/pico.h"
+            ],
+            "defines": [],
+            "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+            "compilerPath": "${userHome}/.pico-sdk/toolchain/RISCV_ZCB_RPI_2_1_1_3/bin/riscv32-unknown-elf-gcc",
+            "cStandard": "c17",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "linux-gcc-arm"
+        }
+    ],
+    "version": 4
+}
