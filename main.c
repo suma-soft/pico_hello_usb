@@ -21,8 +21,11 @@ void test_bme_read() {
 }
 
 int main() {
+    sleep_ms(3000);
     stdio_init_all();
-    sleep_ms(1000); // dla pewności po uruchomieniu
+    setvbuf(stdout, NULL, _IONBF, 0); // ← wyłącza buforowanie
+    sleep_ms(3000); // dla pewności po uruchomieniu
+    printf("✅ Pico gotowe – test printf\n");
 
     int8_t status = bme280_init_default();
     if (status == BME280_OK) {
