@@ -1,9 +1,7 @@
 #include <stdio.h>
-#include <stdint.h>      // <--- To jest potrzebne do int8_t
+#include <stdint.h>
 #include "pico/stdlib.h"
 #include "hardware/i2c.h"
-
-
 #include "bme280_port.h"
 
 void test_bme_read() {
@@ -21,11 +19,14 @@ void test_bme_read() {
 }
 
 int main() {
-    sleep_ms(3000);
     stdio_init_all();
-    setvbuf(stdout, NULL, _IONBF, 0); // ← wyłącza buforowanie
-    sleep_ms(3000); // dla pewności po uruchomieniu
-    printf("✅ Pico gotowe – test printf\n");
+    setvbuf(stdout, NULL, _IONBF, 0);  // wyłączenie buforowania
+    printf("✅ Pico gotowe – czekam na Putty...\n");
+
+    // ⏳ Poczekaj 2 minuty przed inicjalizacją BME
+    sleep_ms(120000);
+
+    printf("➡️ Rozpoczynam inicjalizację BME280...\n");
 
     int8_t status = bme280_init_default();
     if (status == BME280_OK) {

@@ -7,7 +7,7 @@
 #define I2C_PORT i2c0
 #define SDA_PIN 6
 #define SCL_PIN 7
-#define BME280_ADDR 0x77  // lub 0x76 w zależności od modułu
+#define BME280_ADDR 0x76  // lub 0x76 w zależności od modułu
 
 struct bme280_dev bme;
 static uint8_t dev_addr = BME280_ADDR;
