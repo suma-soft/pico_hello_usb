@@ -23,8 +23,8 @@ int main() {
     setvbuf(stdout, NULL, _IONBF, 0);  // wyłączenie buforowania
     printf("✅ Pico gotowe – czekam na Putty...\n");
 
-    // ⏳ Poczekaj 2 minuty przed inicjalizacją BME
-    sleep_ms(120000);
+    // ⏳ Poczekaj 30 sekund przed inicjalizacją BME
+    sleep_ms(30000);
 
     printf("➡️ Rozpoczynam inicjalizację BME280...\n");
 
